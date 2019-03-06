@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "hoist-non-react-statics": "^3.3.0",
-    "langapi-client": "^1.2.9"
+    "langapi-client": "^1.2.11"
   },
   "peerDependencies": {
     "react": ">= 16.8.0"
