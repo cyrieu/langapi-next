@@ -1159,13 +1159,12 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-langapi-client@^1.2.9:
-  version "1.2.9"
-  resolved "https://registry.yarnpkg.com/langapi-client/-/langapi-client-1.2.9.tgz#2334800b95b5ff3ad9832d7dab17c835b13c4b89"
-  integrity sha512-wh52RTVtKNsT6bfBysjEbOwS09pE7NLzmn7wAXR/gsih1P3xfd6WcprWbhL8fjWbvp/8eMug11lJ6yl6CyiLUw==
+langapi-client@^1.2.15:
+  version "1.2.15"
+  resolved "https://registry.yarnpkg.com/langapi-client/-/langapi-client-1.2.15.tgz#96fa1c8847ec8ea3fcbc48103816baffded0acc5"
+  integrity sha512-IWcZ9xXpVyyksFLbQFqoLO3H5tq2ri8Ch4jpuwTubG+UcpMOhd1y0C9yeg+hfPRVLTy+YtFWjCDbZbNZQbKoEw==
   dependencies:
     bowser "^2.1.0"
-    hoist-non-react-statics "^3.3.0"
 
 latest-version@^3.0.0:
   version "3.1.0"
@@ -1696,15 +1695,15 @@ react-is@^16.7.0, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
   integrity sha512-Y4rC1ZJmsxxkkPuMLwvKvlL1Zfpbcu+Bf4ZigkHup3v9EfdYhAlWAaVyA19olXq2o2mGn0w+dFKvk3pVVlYcIA==
 
-react@^16.8.2:
-  version "16.8.3"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.8.3.tgz#c6f988a2ce895375de216edcfaedd6b9a76451d9"
-  integrity sha512-3UoSIsEq8yTJuSu0luO1QQWYbgGEILm+eJl2QN/VLDi7hL+EN18M3q3oVZwmVzzBJ3DkM7RMdRwBmZZ+b4IzSA==
+"react@>= 16.8.0":
+  version "16.8.4"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.8.4.tgz#fdf7bd9ae53f03a9c4cd1a371432c206be1c4768"
+  integrity sha512-0GQ6gFXfUH7aZcjGVymlPOASTuSjlQL4ZtVC5YKH+3JL6bBLCVO21DknzmaPlI90LN253ojj02nsapy+j7wIjg==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.13.3"
+    scheduler "^0.13.4"
 
 read-pkg@^4.0.1:
   version "4.0.1"
@@ -1842,6 +1841,14 @@ scheduler@^0.13.3:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.3.tgz#bed3c5850f62ea9c716a4d781f9daeb9b2a58896"
   integrity sha512-UxN5QRYWtpR1egNWzJcVLk8jlegxAugswQc984lD3kU7NuobsO37/sRfbpTdBjtnD5TBNFA2Q2oLV5+UmPSmEQ==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+
+scheduler@^0.13.4:
+  version "0.13.4"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.4.tgz#8fef05e7a3580c76c0364d2df5e550e4c9140298"
+  integrity sha512-cvSOlRPxOHs5dAhP9yiS/6IDmVAVxmk33f0CtTJRkmUWcb1Us+t7b1wqdzoC0REw2muC9V5f1L/w5R5uKGaepA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
