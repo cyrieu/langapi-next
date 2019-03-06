@@ -10,11 +10,11 @@ export function computeTargetLanguages(acceptLanguageHeaders: string) {
           : 1;
       return previousValue;
     },
-    {} as LanguagePriorities
+    {} as LanguagePriorities,
   );
 
   const preferredLanguage = Object.keys(languagePreferences).sort((a, b) =>
-    languagePreferences[a] >= languagePreferences[b] ? -1 : 1
+    languagePreferences[a] >= languagePreferences[b] ? -1 : 1,
   );
 
   if (preferredLanguage.length) {
