@@ -1,9 +1,9 @@
 import * as React from "react";
 import LangClient from "langapi-client";
-import { computeTargetLanguages } from "./utils";
 import LangContext from "./LangContext";
-import { TranslationsData, LangProps } from "./types";
+import { computeTargetLanguages } from "./utils";
 import { IncomingMessage } from "http";
+import { LangProps, TranslationsData } from "./types";
 
 const isServer = typeof window === "undefined";
 
