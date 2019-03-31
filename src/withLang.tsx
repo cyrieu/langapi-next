@@ -66,7 +66,9 @@ export default (publicKey: string, translations: TranslationsData) => <
       const { context } = this.props as any;
       const Context = context || LangContext;
       const { tr, param } = this;
-      const language = (this.props as any).languages[0];
+      const language = (this.props as any).language
+        ? this.props.language
+        : "en";
       return (
         <Context.Provider
           value={{
