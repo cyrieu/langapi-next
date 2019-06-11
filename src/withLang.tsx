@@ -7,7 +7,7 @@ import { LangProps, TranslationsData } from "./types";
 
 const isServer = typeof window === "undefined";
 
-export default (translations: TranslationsData, publicKey: string) => <
+export default (publicKey: string, translations: TranslationsData) => <
   P extends object
 >(
   App: React.ComponentType<P>,
