@@ -2,14 +2,12 @@ import * as React from "react";
 
 export type LangContextType = {
   language: any;
-  tr: (phrase: string) => string;
-  param: (phrase: string) => string;
+  tr: (phrase: string, options?: any, forceLanguage?: any) => string;
 };
 
 const LangContext = React.createContext<LangContextType>({
   language: "en",
-  tr: (phrase) => phrase,
-  param: (phrase) => `[[__${phrase}__]]`,
+  tr: (phrase: string, options?: any, forceLanguage?: any) => phrase,
 });
 
 export default LangContext;

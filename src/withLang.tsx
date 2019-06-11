@@ -54,7 +54,7 @@ export default (translations: TranslationsData, publicKey: string) => <
       this.langClient.setPreferredLanugages(props.languages);
     }
 
-    tr = (phrase: string, options: any, forceLanguage: any = null) => {
+    tr = (phrase: string, options?: any, forceLanguage?: any) => {
       return this.langClient.tr(phrase, options, forceLanguage);
     };
 
