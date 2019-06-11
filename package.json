@@ -1,6 +1,6 @@
 {
   "name": "langapi-next",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "NextJS support for langapi",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "hoist-non-react-statics": "^3.3.0",
-    "langapi-client": "^1.2.15"
+    "langapi-client": "^1.4.3"
   },
   "peerDependencies": {
     "react": ">= 16.8.0"
