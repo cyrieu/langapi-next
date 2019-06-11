@@ -1,6 +1,6 @@
 import * as React from "react";
-import LangContext, { LangContextType } from "./LangContext";
 import hoistNonReactStatics from "hoist-non-react-statics";
+import LangContext, { LangContextType } from "./LangContext";
 import { LangProps } from "./types";
 
 const withTranslation = <P extends object>(
@@ -16,14 +16,9 @@ const withTranslation = <P extends object>(
         return (
           <Context.Consumer>
             {(langContext: LangContextType) => {
-              const { language, tr, param } = langContext;
+              const { language, tr } = langContext;
               return (
-                <Component
-                  {...this.props as P}
-                  language={language}
-                  tr={tr}
-                  param={param}
-                />
+                <Component {...this.props as P} language={language} tr={tr} />
               );
             }}
           </Context.Consumer>

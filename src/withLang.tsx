@@ -7,7 +7,7 @@ import { LangProps, TranslationsData } from "./types";
 
 const isServer = typeof window === "undefined";
 
-export default (publicKey: string, translations: TranslationsData) => <
+export default (translations: TranslationsData, publicKey: string) => <
   P extends object
 >(
   App: React.ComponentType<P>,
@@ -54,29 +54,25 @@ export default (publicKey: string, translations: TranslationsData) => <
       this.langClient.setPreferredLanugages(props.languages);
     }
 
-    tr = (phrase: string) => {
-      return this.langClient.tr(phrase);
-    };
-
-    param = (phrase: string) => {
-      return this.langClient.param(phrase);
+    tr = (phrase: string, options: any, forceLanguage: any = null) => {
+      return this.langClient.tr(phrase, options, forceLanguage);
     };
 
     render() {
       const { context } = this.props as any;
       const Context = context || LangContext;
-      const { tr, param } = this;
+      const { tr } = this;
       const language = (this.props as any).language
         ? this.props.language
         : "en";
+
       return (
         <Context.Provider
           value={{
             language,
             tr: this.tr,
-            param: this.param,
           }}>
-          <App {...this.props as P} language={language} tr={tr} param={param} />
+          <App {...this.props as P} language={language} tr={tr} />
         </Context.Provider>
       );
     }
