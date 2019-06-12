@@ -8,6 +8,7 @@ export type TranslationsData = {
 export interface LangProps {
   language: string;
   tr: (phrase: string, options?: any, forceLanguage?: any) => string;
+  Tr: (reactProps: any) => string;
 }
 
 export type LanguagePriorities = { [key: string]: number };

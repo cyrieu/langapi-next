@@ -16,9 +16,14 @@ const withTranslation = <P extends object>(
         return (
           <Context.Consumer>
             {(langContext: LangContextType) => {
-              const { language, tr } = langContext;
+              const { language, tr, Tr } = langContext;
               return (
-                <Component {...this.props as P} language={language} tr={tr} />
+                <Component
+                  {...this.props as P}
+                  language={language}
+                  tr={tr}
+                  Tr={Tr}
+                />
               );
             }}
           </Context.Consumer>
