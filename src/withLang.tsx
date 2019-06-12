@@ -58,10 +58,14 @@ export default (publicKey: string, translations: TranslationsData) => <
       return this.langClient.tr(phrase, options, forceLanguage);
     };
 
+    Tr = (reactProps: any) => {
+      return this.langClient ? this.langClient.Tr(reactProps) : () => null;
+    };
+
     render() {
       const { context } = this.props as any;
       const Context = context || LangContext;
-      const { tr } = this;
+      const { tr, Tr } = this;
       const language = (this.props as any).language
         ? this.props.language
         : "en";
@@ -71,8 +75,9 @@ export default (publicKey: string, translations: TranslationsData) => <
           value={{
             language,
             tr: this.tr,
+            Tr: this.Tr,
           }}>
-          <App {...this.props as P} language={language} tr={tr} />
+          <App {...this.props as P} language={language} tr={tr} Tr={Tr} />
         </Context.Provider>
       );
     }
