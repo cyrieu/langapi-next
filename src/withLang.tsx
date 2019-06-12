@@ -59,7 +59,7 @@ export default (publicKey: string, translations: TranslationsData) => <
     };
 
     Tr = (reactProps: any) => {
-      return this.langClient.Tr(reactProps);
+      return this.langClient ? this.langClient.Tr(reactProps) : () => null;
     };
 
     render() {
