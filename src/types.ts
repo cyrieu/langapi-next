@@ -1,5 +1,3 @@
-import { Component } from "react";
-
 export type TranslationsData = {
   prod: any;
   test: any;
@@ -10,7 +8,7 @@ export type TranslationsData = {
 export interface LangProps {
   language: string;
   tr: (phrase: string, options?: any, forceLanguage?: any) => string;
-  Tr: (reactProps: any) => Component;
+  Tr: (reactProps: any) => JSX.Element;
 }
 
 export type LanguagePriorities = { [key: string]: number };

@@ -1,6 +1,11 @@
 import { LanguagePriorities } from "./types";
 
-export function computeTargetLanguages(acceptLanguageHeaders: string) {
+export function computeTargetLanguages(
+  acceptLanguageHeaders: string | undefined,
+) {
+  if (!acceptLanguageHeaders) {
+    return ["en"];
+  }
   const languagePreferences = acceptLanguageHeaders.split(",").reduce(
     (previousValue: LanguagePriorities, currentValue: string) => {
       const languageAndPriorityPair = currentValue.split(";");
@@ -26,4 +31,24 @@ export function computeTargetLanguages(acceptLanguageHeaders: string) {
 
 export function isProductionKey(apiKey: string) {
   return apiKey.substring(0, 8) === "pk_prod_";
+}
+
+export function parseCookie(cookie: string | undefined) {
+  if (!cookie) {
+    return {};
+  }
+  return cookie.split(";").reduce((res, c) => {
+    const [key, val] = c
+      .trim()
+      .split("=")
+      .map(decodeURIComponent);
+    const allNumbers = (str) => /^\d+$/.test(str);
+    try {
+      return Object.assign(res, {
+        [key]: allNumbers(val) ? val : JSON.parse(val),
+      });
+    } catch (e) {
+      return Object.assign(res, { [key]: val });
+    }
+  }, {});
 }
