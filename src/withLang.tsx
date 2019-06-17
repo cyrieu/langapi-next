@@ -56,11 +56,13 @@ export default (publicKey: string, translations: TranslationsData) => <
 
     constructor(props) {
       super(props);
-      this.langClient = LangClient(publicKey, translations);
-      this.langClient.setPreferredLanugages(props.languages);
-      if (props.forceLanguage) {
-        this.langClient.forceLanguage = props.forceLanguage;
-      }
+      this.langClient = LangClient(
+        publicKey,
+        translations,
+        props.forceLanguage,
+      );
+      this.langClient.setPreferredLanguages(props.languages);
+      this.langClient.setForceLanguage(props.forceLanguage);
     }
 
     tr = (phrase: string, options?: any, forceLanguage?: any) => {
@@ -78,6 +80,9 @@ export default (publicKey: string, translations: TranslationsData) => <
       const language = (this.props as any).language
         ? this.props.language
         : "en";
+      if (this.props.forceLanguage) {
+        langClient.forceLanguage = this.props.forceLanguage;
+      }
 
       return (
         <Context.Provider

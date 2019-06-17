@@ -1243,10 +1243,10 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-langapi-client@^1.4.3:
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/langapi-client/-/langapi-client-1.4.4.tgz#85f5fb6313e43759f228007ddc6662826d9b83b5"
-  integrity sha512-QBOZIXYSbaCq4fGBbRmd7qB9kbGq3R+jxDAnActiruvfIB88aRBHjHjOgPz2CmXuOATEnDkoKYy3bppEsQl8Hw==
+langapi-client@^1.4.6:
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/langapi-client/-/langapi-client-1.4.6.tgz#43600686d0f934cb34af99dcb32948a96296f90d"
+  integrity sha512-X/IQFjXpeNPQ2kn8SVLQ2hwtGTrp8CpK9X30cRJNsHL2Wp/NvPMFnkXIyjSsEuuTFe/5I9FdgLY2+Z7+s5gGmg==
   dependencies:
     bowser "^2.1.0"
     create-react-class "^15.6.3"

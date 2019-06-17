@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "hoist-non-react-statics": "^3.3.0",
-    "langapi-client": "^1.4.3",
+    "langapi-client": "^1.4.6",
     "nookies": "^2.0.6",
     "react-cookie": "^4.0.0"
   },
