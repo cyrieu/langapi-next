@@ -78,17 +78,6 @@ export default (publicKey: string, translations: TranslationsData) => <
       const language = (this.props as any).language
         ? this.props.language
         : "en";
-      if (this.props.forceLanguage) {
-        langClient.forceLanguage = this.props.forceLanguage;
-      }
-
-      if (isServer) {
-        console.log("RENDER");
-        console.log(this.langClient);
-        console.log(this.props.forceLanguage);
-        // console.log(this.tr("Hello world!", {}, this.props.forceLanguage));
-        console.log(this.langClient.tr("Hello world!"));
-      }
 
       return (
         <Context.Provider
