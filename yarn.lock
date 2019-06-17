@@ -234,9 +234,9 @@ binary-extensions@^1.0.0:
   integrity sha512-EgmjVLMn22z7eGGv3kcnHwSnJXmFHjISTY9E/S5lIcTD3Oxw05QTcBLNkJFzcb3cNueUdF/IN4U+d78V0zO8Hw==
 
 bowser@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/bowser/-/bowser-2.1.0.tgz#76cc094f97578ba4858fb4359445ee1317d1be6f"
-  integrity sha512-tP90ci4QY8PRBQjU0+iTsoO3DMNYtXCM0aVxeKhjxXF8IH9xTXUmjcTECPN+y5v0BGeRDfMcSLeohPiUZuz37g==
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/bowser/-/bowser-2.4.0.tgz#fcfbca3d7659ba88afabbb8a45b33d2e4876a90c"
+  integrity sha512-DA9Opnb8S8TBLPPszrHDtCCATbAMkrxF+AxPs/d95r99frBioGpNwL1cbG3AHeV3FnoZW655vEvEryBHFeGrMg==
 
 boxen@^1.2.1:
   version "1.3.0"
@@ -1243,10 +1243,10 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-langapi-client@^1.4.6:
-  version "1.4.6"
-  resolved "https://registry.yarnpkg.com/langapi-client/-/langapi-client-1.4.6.tgz#43600686d0f934cb34af99dcb32948a96296f90d"
-  integrity sha512-X/IQFjXpeNPQ2kn8SVLQ2hwtGTrp8CpK9X30cRJNsHL2Wp/NvPMFnkXIyjSsEuuTFe/5I9FdgLY2+Z7+s5gGmg==
+langapi-client@^1.4.8:
+  version "1.4.8"
+  resolved "https://registry.yarnpkg.com/langapi-client/-/langapi-client-1.4.8.tgz#f89d8ba06bff396b68cd0cd3822cbab8398d2f31"
+  integrity sha512-P5iIEqvAIJVo2VFwZJA4sMb2IY/fUTWRxAjaS7vQQQtMdIpzB1dX4po8Xv3GUR5edBEfROit1VwtetEmjTgkPA==
   dependencies:
     bowser "^2.1.0"
     create-react-class "^15.6.3"

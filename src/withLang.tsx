@@ -34,7 +34,11 @@ export default (publicKey: string, translations: TranslationsData) => <
         );
       }
 
-      const cookies = parseCookies(appContext);
+      const cookies = parseCookies(
+        appContext.ctx ? appContext.ctx : appContext,
+      );
+      console.log("COOKIES");
+      console.log(appContext);
       langProps = {
         languages,
         ...(cookies.LangManualLanguageToken && {
@@ -48,6 +52,8 @@ export default (publicKey: string, translations: TranslationsData) => <
         appProps = await app.getInitialProps(appContext);
       }
 
+      // console.log("INITIAL");
+      // console.log(langProps);
       return {
         ...langProps,
         ...appProps,
@@ -61,6 +67,8 @@ export default (publicKey: string, translations: TranslationsData) => <
         translations,
         props.forceLanguage,
       );
+      // console.log("BRRR");
+      // console.log(props);
       this.langClient.setPreferredLanguages(props.languages);
       this.langClient.setForceLanguage(props.forceLanguage);
     }
@@ -77,12 +85,18 @@ export default (publicKey: string, translations: TranslationsData) => <
       const { context } = this.props as any;
       const Context = context || LangContext;
       const { tr, Tr, langClient } = this;
-      const language = (this.props as any).language
-        ? this.props.language
-        : "en";
+      const language =
+        this.props.forceLanguage ||
+        this.props.language ||
+        (langClient.languagesSortedByPref &&
+          langClient.languagesSortedByPref[0]) ||
+        "en";
       if (this.props.forceLanguage) {
         langClient.forceLanguage = this.props.forceLanguage;
       }
+
+      // console.log("HEREEE");
+      // console.log(langClient);
 
       return (
         <Context.Provider
