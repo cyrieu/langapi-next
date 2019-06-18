@@ -34,7 +34,10 @@ export default (publicKey: string, translations: TranslationsData) => <
         );
       }
 
-      const cookies = parseCookies(appContext);
+      const cookies = parseCookies(
+        appContext.ctx ? appContext.ctx : appContext,
+      );
+
       langProps = {
         languages,
         ...(cookies.LangManualLanguageToken && {
@@ -61,6 +64,7 @@ export default (publicKey: string, translations: TranslationsData) => <
         translations,
         props.forceLanguage,
       );
+
       this.langClient.setPreferredLanguages(props.languages);
       this.langClient.setForceLanguage(props.forceLanguage);
     }
@@ -77,9 +81,12 @@ export default (publicKey: string, translations: TranslationsData) => <
       const { context } = this.props as any;
       const Context = context || LangContext;
       const { tr, Tr, langClient } = this;
-      const language = (this.props as any).language
-        ? this.props.language
-        : "en";
+      const language =
+        this.props.forceLanguage ||
+        this.props.language ||
+        (langClient.languagesSortedByPref &&
+          langClient.languagesSortedByPref[0]) ||
+        "en";
       if (this.props.forceLanguage) {
         langClient.forceLanguage = this.props.forceLanguage;
       }
