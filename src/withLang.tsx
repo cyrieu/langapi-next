@@ -37,8 +37,7 @@ export default (publicKey: string, translations: TranslationsData) => <
       const cookies = parseCookies(
         appContext.ctx ? appContext.ctx : appContext,
       );
-      console.log("COOKIES");
-      console.log(appContext);
+
       langProps = {
         languages,
         ...(cookies.LangManualLanguageToken && {

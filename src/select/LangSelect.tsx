@@ -1,10 +1,11 @@
 import * as React from "react";
-import Globe from "../Globe";
+import Globe from "./Globe";
 import LangContext, { LangContextType } from "../LangContext";
 import LangOptions from "./LangOptions";
 import { LangProps } from "../types";
 import { languageMapping } from "./utils";
 import { withCookies } from "react-cookie";
+import "./styles.css";
 
 type Props = {
   outerStyle?: any;
@@ -12,17 +13,6 @@ type Props = {
 
 type State = {
   dropdownOpen: boolean;
-};
-
-const selectStyle: React.CSSProperties = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "flex-start",
-  borderRadius: 4,
-  padding: "4px",
-  backgroundColor: "#ffffff",
-  transition: "background .16s ease-in-out",
-  cursor: "pointer",
 };
 
 class LangSelect extends React.Component<Props, State> {
@@ -70,11 +60,9 @@ class LangSelect extends React.Component<Props, State> {
           return (
             <div style={{ ...this.props.outerStyle }}>
               <div
-                style={{
-                  ...selectStyle,
-                }}
+                className="langapi-next-select"
                 onClick={this.toggleDropdown}>
-                <div style={{ display: "flex" }}>
+                <div style={{ display: "flex", justifyContent: "center" }}>
                   <Globe />
                   <div
                     style={{

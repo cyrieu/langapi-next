@@ -3,6 +3,7 @@ import ClickOutside from "./ClickOutside";
 import LangContext, { LangContextType } from "../LangContext";
 import { LangProps } from "../types";
 import { languageMapping } from "./utils";
+import "./styles.css";
 
 // TODO change this when original language eventually changes
 const originalLanguage = "en";
@@ -48,7 +49,6 @@ export default class LangOptions extends React.Component<Props, State> {
 
     const languages = [originalLanguage, ...this.props.targetLanguages]
       .map((language) => {
-        console.log(language);
         if (languageMapping[language]) {
           return [language, languageMapping[language]];
         }
@@ -62,79 +62,35 @@ export default class LangOptions extends React.Component<Props, State> {
         return languageA[1].localeCompare(languageB[1]);
       });
 
-    console.log("HERE");
-    console.log(languages);
-
     return (
       <ClickOutside onClickOutside={this.props.closeOptions}>
-        <div style={styling}>
-          <div style={titleStyle}>
-            <div style={poweredByStyle}>Made with ♥ by</div>
+        <div className="langapi-next-option-container">
+          {languages.map((targetLanguage, index) => {
+            return (
+              <div
+                className="langapi-next-option"
+                onClick={() => {
+                  console.log("OK");
+                  this.props.onSelectLanguage(targetLanguage[0]);
+                  this.props.closeOptions();
+                }}
+                key={index}>
+                {targetLanguage[1]}
+              </div>
+            );
+          })}
+          <div className="langapi-next-title">
+            <div className="langapi-next-powered-by">Powered by&nbsp;</div>
             <div
-              style={langApiStyle}
+              className="langapi-next-langapi"
               onClick={() => {
                 window.location.assign("https://www.langapi.co");
               }}>
               Lang API
             </div>
           </div>
-          {languages.map((targetLanguage) => {
-            return (
-              <div
-                style={optionStyle}
-                onClick={() => {
-                  console.log("OK");
-                  this.props.onSelectLanguage(targetLanguage[0]);
-                  this.props.closeOptions();
-                }}>
-                {targetLanguage[1]}
-              </div>
-            );
-          })}
         </div>
       </ClickOutside>
     );
   }
 }
-
-const styling: React.CSSProperties = {
-  width: "200px",
-  backgroundColor: "#ffffff",
-  position: "absolute",
-  zIndex: 1,
-  boxShadow: "0px 5px 40px rgba(0, 0, 0, .16)",
-  borderRadius: 4,
-  cursor: "arrow",
-};
-
-const titleStyle: React.CSSProperties = {
-  height: "40px",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  backgroundColor: "#ffffff",
-  fontSize: "12px",
-  borderTopLeftRadius: 4,
-  borderTopRightRadius: 4,
-  padding: "4px",
-  borderBottom: "1px solid #e0e0e0",
-};
-const poweredByStyle = {
-  color: "#e0e0e0",
-};
-
-const langApiStyle = {
-  color: "#43f096",
-  cursor: "pointer",
-};
-const optionStyle = {
-  fontSize: "14px",
-  color: "#a0a0a0",
-  padding: "4px",
-  backgroundColor: "#ffffff",
-  borderBottom: "1px solid #e0e0e0",
-  "&:last-child": {
-    borderBottom: "0px",
-  },
-  cursor: "pointer",
-};

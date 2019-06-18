@@ -13,7 +13,7 @@
     "preversion": "npm run lint",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently --kill-others \"tsc -w\" \"nodemon dist/index.js\"",
-    "build": "tsc",
+    "build": "tsc && cp src/select/styles.css dist/select",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\""
   },
@@ -42,6 +42,7 @@
     "typescript": "^3.3.3"
   },
   "dependencies": {
+    "@emotion/styled": "^10.0.12",
     "hoist-non-react-statics": "^3.3.0",
     "langapi-client": "^1.4.8",
     "nookies": "^2.0.6",

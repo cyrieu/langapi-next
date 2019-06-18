@@ -11,10 +11,10 @@ export default class Globe extends React.Component<Props, State> {
         <g
           id="Page-1"
           stroke="none"
-          stroke-width="1"
+          strokeWidth="1"
           fill="none"
-          fill-rule="evenodd">
-          <g id="globe" fill-rule="nonzero">
+          fillRule="evenodd">
+          <g id="globe" fillRule="nonzero">
             <path
               d="M256,0 C114.844,0 0,114.844 0,256 C0,397.156 114.844,512 256,512 C397.156,512 512,397.156 512,256 C512,114.844 397.156,0 256,0 Z"
               id="Path"
