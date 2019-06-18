@@ -40,9 +40,6 @@ class LangSelect extends React.Component<Props, State> {
         {(langContext: LangContextType) => {
           const { language, tr, Tr, langTranslateClient } = langContext;
 
-          console.log(langTranslateClient);
-          console.log(this.props.outerStyle);
-
           let allLanguages: string[] = [];
           if (langTranslateClient) {
             allLanguages = allLanguages.concat(

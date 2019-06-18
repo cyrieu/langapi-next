@@ -70,7 +70,6 @@ export default class LangOptions extends React.Component<Props, State> {
               <div
                 className="langapi-next-option"
                 onClick={() => {
-                  console.log("OK");
                   this.props.onSelectLanguage(targetLanguage[0]);
                   this.props.closeOptions();
                 }}

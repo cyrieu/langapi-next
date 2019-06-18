@@ -51,8 +51,6 @@ export default (publicKey: string, translations: TranslationsData) => <
         appProps = await app.getInitialProps(appContext);
       }
 
-      // console.log("INITIAL");
-      // console.log(langProps);
       return {
         ...langProps,
         ...appProps,
@@ -66,8 +64,7 @@ export default (publicKey: string, translations: TranslationsData) => <
         translations,
         props.forceLanguage,
       );
-      // console.log("BRRR");
-      // console.log(props);
+
       this.langClient.setPreferredLanguages(props.languages);
       this.langClient.setForceLanguage(props.forceLanguage);
     }
@@ -93,9 +90,6 @@ export default (publicKey: string, translations: TranslationsData) => <
       if (this.props.forceLanguage) {
         langClient.forceLanguage = this.props.forceLanguage;
       }
-
-      // console.log("HEREEE");
-      // console.log(langClient);
 
       return (
         <Context.Provider
