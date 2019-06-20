@@ -1,9 +1,9 @@
 import * as React from "react";
 import ClickOutside from "./ClickOutside";
 import LangContext, { LangContextType } from "../LangContext";
+import styled from "@emotion/styled";
 import { LangProps } from "../types";
 import { languageMapping } from "./utils";
-import "./styles.css";
 
 // TODO change this when original language eventually changes
 const originalLanguage = "en";
@@ -64,10 +64,10 @@ export default class LangOptions extends React.Component<Props, State> {
 
     return (
       <ClickOutside onClickOutside={this.props.closeOptions}>
-        <div className="langapi-next-option-container">
+        <OptionContainer>
           {languages.map((targetLanguage, index) => {
             return (
-              <div
+              <Option
                 className="langapi-next-option"
                 onClick={() => {
                   this.props.onSelectLanguage(targetLanguage[0]);
@@ -75,21 +75,72 @@ export default class LangOptions extends React.Component<Props, State> {
                 }}
                 key={index}>
                 {targetLanguage[1]}
-              </div>
+              </Option>
             );
           })}
-          <div className="langapi-next-title">
-            <div className="langapi-next-powered-by">Powered by&nbsp;</div>
-            <div
-              className="langapi-next-langapi"
+          <Title>
+            <PoweredBy>Powered by</PoweredBy>&nbsp;
+            <LangApi
               onClick={() => {
                 window.location.assign("https://www.langapi.co");
               }}>
               Lang API
-            </div>
-          </div>
-        </div>
+            </LangApi>
+          </Title>
+        </OptionContainer>
       </ClickOutside>
     );
   }
 }
+
+export const OptionContainer = styled.div`
+  width: 200px;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  top: 50px;
+  opacity: 1;
+  transition: opacity 0.16s fade-in-out;
+}
+`;
+
+const Title = styled.div`
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background-color: #fafafa;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 4px;
+  justify-content: center;
+`;
+
+const PoweredBy = styled.div`
+  color: #a0a0a0;
+  font-size: 12px;
+`;
+
+const LangApi = styled.div`
+  color: #43f096;
+  font-size: 12px;
+  display: inline-block;
+  cursor: pointer;
+`;
+
+const Option = styled.div`
+  font-size: 14px;
+  color: #909090;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  transition: background-color 0.16s fade-in-out !important;
+  cursor: pointer;
+  &:first-child {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+  &:hover {
+    background-color: #eaeaea;
+  }
+`;

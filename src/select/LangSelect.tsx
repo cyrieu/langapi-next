@@ -2,10 +2,10 @@ import * as React from "react";
 import Globe from "./Globe";
 import LangContext, { LangContextType } from "../LangContext";
 import LangOptions from "./LangOptions";
+import styled from "@emotion/styled";
 import { LangProps } from "../types";
 import { languageMapping } from "./utils";
 import { withCookies } from "react-cookie";
-import "./styles.css";
 
 type Props = {
   outerStyle?: any;
@@ -56,9 +56,7 @@ class LangSelect extends React.Component<Props, State> {
 
           return (
             <div style={{ ...this.props.outerStyle }}>
-              <div
-                className="langapi-next-select"
-                onClick={this.toggleDropdown}>
+              <Select onClick={this.toggleDropdown}>
                 <div style={{ display: "flex", justifyContent: "center" }}>
                   <Globe />
                   <div
@@ -70,7 +68,7 @@ class LangSelect extends React.Component<Props, State> {
                     {languageMapping[language] || "Unknown"}
                   </div>
                 </div>
-              </div>
+              </Select>
               {this.state.dropdownOpen && (
                 <LangOptions
                   selectedLanguage={language}
@@ -88,3 +86,17 @@ class LangSelect extends React.Component<Props, State> {
 }
 
 export default withCookies<any>(LangSelect);
+
+const Select = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 8px;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  transition: background 0.16s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: #eaeaea;
+  }
+`;
