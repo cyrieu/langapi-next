@@ -39,16 +39,17 @@
     "react-dom": "^16.8.2",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
-    "typescript": "^3.3.3"
+    "typescript": "^3.3.3",
+    "langapi-client": "1.4.10"
   },
   "dependencies": {
     "@emotion/styled": "^10.0.12",
     "hoist-non-react-statics": "^3.3.0",
-    "langapi-client": "^1.4.8",
     "nookies": "^2.0.6",
     "react-cookie": "^4.0.0"
   },
   "peerDependencies": {
-    "react": ">= 16.8.0"
+    "react": ">= 16.8.0",
+    "langapi-client": "1.4.10"
   }
 }
