@@ -48,10 +48,10 @@
     "hoist-non-react-statics": "^3.3.0",
     "nookies": "^2.0.6",
     "react-cookie": "^4.0.0",
-    "react-langapi": "^1.2.3"
+    "react-langapi": "^1.2.4"
   },
   "peerDependencies": {
-    "langapi-client": "^1.4.10",
+    "langapi-client": "^1.4.25",
     "react": "^16.8.3"
   }
 }
