@@ -5,6 +5,7 @@ import { computeTargetLanguages, parseCookie } from "./utils";
 import { IncomingMessage } from "http";
 import { LangProps, TranslationsData } from "./types";
 import { parseCookies } from "nookies";
+import { LangContext as ReactLangContext } from "react-langapi";
 
 const isServer = typeof window === "undefined";
 
@@ -99,13 +100,19 @@ export default (publicKey: string, translations: TranslationsData) => <
             Tr: this.Tr,
             langTranslateClient: this.langClient,
           }}>
-          <App
-            {...this.props as P}
-            language={language}
-            tr={tr}
-            Tr={Tr}
-            langTranslateClient={langClient}
-          />
+          <ReactLangContext.Provider
+            value={{
+              currentLanguage: language,
+              client: this.langClient,
+            }}>
+            <App
+              {...this.props as P}
+              language={language}
+              tr={tr}
+              Tr={Tr}
+              langTranslateClient={langClient}
+            />
+          </ReactLangContext.Provider>
         </Context.Provider>
       );
     }

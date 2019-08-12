@@ -36,7 +36,7 @@
     "langapi-client": "1.4.10",
     "nodemon": "^1.18.9",
     "prettier": "^1.16.3",
-    "react": ">= 16.8.0",
+    "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
@@ -47,10 +47,11 @@
     "@emotion/styled": "^10.0.12",
     "hoist-non-react-statics": "^3.3.0",
     "nookies": "^2.0.6",
-    "react-cookie": "^4.0.0"
+    "react-cookie": "^4.0.0",
+    "react-langapi": "^1.2.3"
   },
   "peerDependencies": {
     "langapi-client": "^1.4.10",
-    "react": ">= 16.8.0"
+    "react": "^16.8.3"
   }
 }
