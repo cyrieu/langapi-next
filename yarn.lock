@@ -2161,10 +2161,10 @@ react-is@^16.7.0, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
   integrity sha512-Y4rC1ZJmsxxkkPuMLwvKvlL1Zfpbcu+Bf4ZigkHup3v9EfdYhAlWAaVyA19olXq2o2mGn0w+dFKvk3pVVlYcIA==
 
-react-langapi@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/react-langapi/-/react-langapi-1.2.3.tgz#fdbed5b69339728061f2ad0fb3ad546a2e82a19f"
-  integrity sha512-BoycAFK1kO/DY3ykJpFD5Azyv/yjV8yEKBscLo+otWy7Yw4hBM1/6GWqw+jry7HgbpunFF0CZAau0Jpkh+CX9Q==
+react-langapi@^1.2.4:
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/react-langapi/-/react-langapi-1.2.7.tgz#67103887cb70601df6b8a9395a5611723587af68"
+  integrity sha512-CjSDtWMieYgakl32G7fhR+DWmZPtuMT92475hhRuQfAOgo2pjNFK12T4mcZU9x/bmRqz96OwO4KZ6DkZxXyWzA==
   dependencies:
     "@emotion/core" "^10.0.14"
     "@emotion/styled" "^10.0.14"
@@ -2631,9 +2631,9 @@ touch@^3.1.0:
     nopt "~1.0.10"
 
 tree-kill@^1.1.0:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.1.tgz#5398f374e2f292b9dcc7b2e71e30a5c3bb6c743a"
-  integrity sha512-4hjqbObwlh2dLyW4tcz0Ymw0ggoaVDMveUB9w8kFSQScdRLo0gxO9J7WFcUBo+W3C1TLdFIEwNOWebgZZ0RH9Q==
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
+  integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
 tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.9.3"
