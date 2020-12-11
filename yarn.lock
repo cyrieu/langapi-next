@@ -1301,9 +1301,9 @@ inherits@2, inherits@^2.0.3, inherits@~2.0.3:
   integrity sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
 
 ini@^1.3.4, ini@~1.3.0:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
-  integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.7.tgz#a09363e1911972ea16d7a8851005d84cf09a9a84"
+  integrity sha512-iKpRpXP+CrP2jyrxvg1kMUpXDyRUFDWurxbnVT1vQPx+Wz9uCYsMIqYuSBLV+PAaZG/d7kRLKRFc9oDMsH+mFQ==
 
 intl-messageformat-parser@^1.6.5, intl-messageformat-parser@^1.6.6:
   version "1.6.6"
@@ -2161,10 +2161,10 @@ react-is@^16.7.0, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
   integrity sha512-Y4rC1ZJmsxxkkPuMLwvKvlL1Zfpbcu+Bf4ZigkHup3v9EfdYhAlWAaVyA19olXq2o2mGn0w+dFKvk3pVVlYcIA==
 
-react-langapi@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/react-langapi/-/react-langapi-1.2.3.tgz#fdbed5b69339728061f2ad0fb3ad546a2e82a19f"
-  integrity sha512-BoycAFK1kO/DY3ykJpFD5Azyv/yjV8yEKBscLo+otWy7Yw4hBM1/6GWqw+jry7HgbpunFF0CZAau0Jpkh+CX9Q==
+react-langapi@^1.2.4:
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/react-langapi/-/react-langapi-1.2.7.tgz#67103887cb70601df6b8a9395a5611723587af68"
+  integrity sha512-CjSDtWMieYgakl32G7fhR+DWmZPtuMT92475hhRuQfAOgo2pjNFK12T4mcZU9x/bmRqz96OwO4KZ6DkZxXyWzA==
   dependencies:
     "@emotion/core" "^10.0.14"
     "@emotion/styled" "^10.0.14"
