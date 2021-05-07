@@ -2161,10 +2161,10 @@ react-is@^16.7.0, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
   integrity sha512-Y4rC1ZJmsxxkkPuMLwvKvlL1Zfpbcu+Bf4ZigkHup3v9EfdYhAlWAaVyA19olXq2o2mGn0w+dFKvk3pVVlYcIA==
 
-react-langapi@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/react-langapi/-/react-langapi-1.2.3.tgz#fdbed5b69339728061f2ad0fb3ad546a2e82a19f"
-  integrity sha512-BoycAFK1kO/DY3ykJpFD5Azyv/yjV8yEKBscLo+otWy7Yw4hBM1/6GWqw+jry7HgbpunFF0CZAau0Jpkh+CX9Q==
+react-langapi@^1.2.4:
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/react-langapi/-/react-langapi-1.2.7.tgz#67103887cb70601df6b8a9395a5611723587af68"
+  integrity sha512-CjSDtWMieYgakl32G7fhR+DWmZPtuMT92475hhRuQfAOgo2pjNFK12T4mcZU9x/bmRqz96OwO4KZ6DkZxXyWzA==
   dependencies:
     "@emotion/core" "^10.0.14"
     "@emotion/styled" "^10.0.14"
@@ -2677,9 +2677,9 @@ typescript@^3.3.3:
   integrity sha512-JjSKsAfuHBE/fB2oZ8NxtRTk5iGcg6hkYXMnZ3Wc+b2RSqejEqTaem11mHASMnFilHrax3sLK0GDzcJrekZYLw==
 
 ua-parser-js@^0.7.18:
-  version "0.7.20"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.20.tgz#7527178b82f6a62a0f243d1f94fd30e3e3c21098"
-  integrity sha512-8OaIKfzL5cpx8eCMAhhvTlft8GYF8b2eQr6JkCyVdrgjcytyOmPCXrqXFcUnhonRpLlh5yxEZVohm6mzaowUOw==
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
 undefsafe@^2.0.2:
   version "2.0.2"
