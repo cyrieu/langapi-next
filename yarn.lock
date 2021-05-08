@@ -1622,9 +1622,9 @@ locate-path@^3.0.0:
     path-exists "^3.0.0"
 
 lodash@^4.17.10, lodash@^4.17.11:
-  version "4.17.11"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
-  integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
   version "1.4.0"
@@ -2161,10 +2161,10 @@ react-is@^16.7.0, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
   integrity sha512-Y4rC1ZJmsxxkkPuMLwvKvlL1Zfpbcu+Bf4ZigkHup3v9EfdYhAlWAaVyA19olXq2o2mGn0w+dFKvk3pVVlYcIA==
 
-react-langapi@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/react-langapi/-/react-langapi-1.2.3.tgz#fdbed5b69339728061f2ad0fb3ad546a2e82a19f"
-  integrity sha512-BoycAFK1kO/DY3ykJpFD5Azyv/yjV8yEKBscLo+otWy7Yw4hBM1/6GWqw+jry7HgbpunFF0CZAau0Jpkh+CX9Q==
+react-langapi@^1.2.4:
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/react-langapi/-/react-langapi-1.2.7.tgz#67103887cb70601df6b8a9395a5611723587af68"
+  integrity sha512-CjSDtWMieYgakl32G7fhR+DWmZPtuMT92475hhRuQfAOgo2pjNFK12T4mcZU9x/bmRqz96OwO4KZ6DkZxXyWzA==
   dependencies:
     "@emotion/core" "^10.0.14"
     "@emotion/styled" "^10.0.14"
